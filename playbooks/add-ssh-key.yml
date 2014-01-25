@@ -1,0 +1,8 @@
+---
+- hosts: all
+
+  tasks:
+    - name: add ssh public key
+      authorized_key: user=ubuntu key="{{ lookup('file',item) }}" 
+      with_fileglob:
+        - /etc/ansible/secrets/*.pub

@@ -1,0 +1,6 @@
+---
+# these are service state handlers
+
+# this is an example to show that handlers can be included from yaml files,
+# to promote reuse between different plays or even playbooks.  They work
+# just like normal handlers.
