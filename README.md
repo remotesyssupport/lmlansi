@@ -15,7 +15,7 @@ Directory Structure
 │       ├── group_vars          ==> The groups level variable directory
 │       ├── host_vars           ==> The hosts level variable directory
 │       └── localhost           ==> A typical host definition 
-├── playbooks                   ==> Adhoc/one-time playbooks 
+├── playbooks                   ==> Site and main driver playbooks
 │   ├── add-ssh-key.yml         ==> A typical example of a one-time/adhoc playbook
 ├── plugins                     ==> Plugin directory as defined in `ansible.cfg`
 │   ├── action                  ==> `Action` Plugin Directory

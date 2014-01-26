@@ -1,0 +1,19 @@
+---
+
+# Ansible needs libselinux-python
+- name: Mandatory Requirement | Install libselinux-python
+  yum: name=libselinux-python state=present
+  tags: 
+    - package
+
+# Add EPEL Yum Repo
+- name: YUM Repo | epel-release-repository rpm 
+  yum: name={{ yum.epel_url }} state=present
+  tags: 
+    - repository
+
+# Add Remi Yum Repo
+- name: YUM Repo | remi-repository rpm
+  yum: name={{ yum.remi_url }} state=present
+  tags: 
+    - repository

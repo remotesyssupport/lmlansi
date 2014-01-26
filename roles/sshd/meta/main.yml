@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: "Raghav Palekar"
+  company: RemoteSysSupport
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  categories:
+  - system
+dependencies: []
