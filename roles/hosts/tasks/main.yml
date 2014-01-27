@@ -1,0 +1,6 @@
+---
+### Tasks for role: hosts
+# Adds all hosts from inventory to the hosts file
+- name: Hosts | Generate Hosts file
+  template: src=hosts.j2 dest=/etc/hosts mode=0644
+  tags: [hosts, configuration]

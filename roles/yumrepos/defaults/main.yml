@@ -1,4 +1,5 @@
 ---
+### Defaults for role: yumrepos
 yum:
   epel_url: http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
   remi_url: http://rpms.famillecollet.com/enterprise/remi-release-6.rpm

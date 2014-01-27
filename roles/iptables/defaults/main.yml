@@ -1,0 +1,3 @@
+---
+### Defaults for role: iptables
+iptables_accept_ports: [22, 80, 443]

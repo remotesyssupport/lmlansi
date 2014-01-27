@@ -1,16 +1,15 @@
 ---
+### Tasks for role: sshd
 # Install SSH Server
 - name: SSH | Install sshd for Debian
   apt: pkg={{ sshd_pkg_name }} state={{ sshd_pkg_state }}
   when: ansible_os_family == 'Debian'
-  tags:
-    - package
+  tags: [ssh, package]
 
 - name: SSH | Install sshd for RedHat
   yum: name={{ sshd_pkg_name }} state={{ sshd_pkg_state }}
   when: ansible_os_family == 'RedHat'
-  tags:
-    - package
+  tags: [ssh, package]
 
 # Configure SSH Server
 - name: SSH | Configure sshd
@@ -19,11 +18,9 @@
     dest={{ sshd_config_basedir }}/sshd_config
     validate="/usr/sbin/sshd -t -f %s"
   notify: restart sshd
-  tags:
-    - configuration
+  tags: [ssh, configuration]
 
 # Enforce SSH Configurations
 - name: SSH | Enable sshd
   service: name={{ sshd_service_name }} state=running enabled=yes
-  tags:
-    - service
+  tags: [ssh, service]

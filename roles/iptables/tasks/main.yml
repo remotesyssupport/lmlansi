@@ -1,0 +1,25 @@
+---
+### Tasks for role: iptables
+# Check if the iptables accept ports are provided
+- name: Iptables | Validate iptables_accept_ports contains only numbers
+  fail: msg="if iptables_accept_ports are not numbers"
+  when: "item is not number"
+  with_items: $iptables_accept_ports
+  tags: [iptables, validate]
+
+# Install Iptables
+- name: Iptables | Install Iptables package
+  yum: name=iptables state=present
+  tags: [iptables, package]
+
+# Configure the Iptables
+- name: Iptables | Copy iptables config
+  template: src=iptables.j2 dest=/etc/sysconfig/iptables owner=root group=root mode=600 backup=yes
+  notify:
+    - restart iptables
+  tags: [iptables, configuration]
+
+# Enable Iptables
+- name: Iptables | Ensure iptables is running
+  service: name=iptables state=started enabled=yes
+  tags: [iptables, service]

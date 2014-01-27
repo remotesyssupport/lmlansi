@@ -1,7 +1,8 @@
 ---
 galaxy_info:
   author: "Raghav Palekar"
-  company: RemoteSysSupport
+  description: "Ansible Role to install and configure sshd"
+  company: "Remote System Support"
   license: MIT
   min_ansible_version: 1.4
   platforms:

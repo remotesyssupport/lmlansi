@@ -1,0 +1,5 @@
+---
+### Handler for role: iptables
+# Service Iptables
+- name: Iptables | Restart iptables
+  service: name=iptables state=restarted

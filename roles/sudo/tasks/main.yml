@@ -1,0 +1,25 @@
+---
+### Tasks for role: sudo
+# Setup the sudoer file for Redhat/CentOS
+- name: Sudo | Create and setup sudoer file
+  template: > 
+    src=sudoers_redhat.j2 
+    dest=/etc/sudoers 
+    validate='/usr/sbin/visudo -cf %s' 
+    owner=root 
+    group=root 
+    mode=0440
+  when: ansible_os_family == 'RedHat'
+  tags: [sudo, configuration]
+
+# Setup the sudoer file for Ubuntu
+- name: Sudo | Create and setup sudoer file
+  template: >
+    src=sudoers_ubuntu.j2 
+    dest=/etc/sudoers.d/90-admins 
+    validate='/usr/sbin/visudo -cf %s' 
+    owner=root 
+    group=root 
+    mode=0440
+  when: ansible_os_family == 'Debian'
+  tags: [sudo, configuration]

@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: "Raghav Palekar"
-  description: "Add third party yum repository"
+  description: "Ansible Role for Firewall - IPTABLES"
   company: "Remote System Support"
   license: MIT
   min_ansible_version: 1.4
@@ -10,6 +10,6 @@ galaxy_info:
     versions:
     - all
   categories:
+  - networking
   - system
-  - packaging
 dependencies: []

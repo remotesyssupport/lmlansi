@@ -1,0 +1,14 @@
+---
+### Defaults for role: user
+# Create group for each user
+users_create_per_user_group: true
+# If above is "false", then default group
+users_group: users
+# Default Shell
+users_default_shell: /bin/bash
+# Create home dirs
+users_create_homedirs: true
+
+# Lists of users to create and delete
+users: []
+users_deleted: []

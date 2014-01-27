@@ -1,0 +1,42 @@
+---
+### Tasks for role: users
+# Create the group per user if allowed
+- name: users | create group for each user
+  group: name="{{item.username}}" gid="{{item.uid}}"
+  with_items: users
+  when: users_create_per_user_group
+  tags: [users, group, create]
+
+# Create the user
+- name: users | create user
+  user: >
+    name="{{item.username}}"
+    group="{{item.username if users_create_per_user_group else users_group}}"
+    groups="{{item.groups | join(',')}}"
+    shell={{item.shell if item.shell is defined else users_default_shell}}
+    comment="{{item.name}}"
+    uid="{{item.uid}}"
+    createhome="{{'yes' if users_create_homedirs else 'no'}}"
+  with_items: users
+  tags: [users, create]
+
+# Add the user's ssh public keys to authorized_key
+- name: users | add ssh public keys to authorized_key
+  authorized_key: user="{{item.0.username}}" key="{{item.1}}"
+  with_subelements:
+    - users
+    - ssh_key
+  tags: [users, setup]
+
+# Remove the user
+- name: users | remove user
+  user: name="{{item.username}}" state=absent
+  with_items: users_deleted
+  tags: [users, remove]
+
+# Remove the associated group
+- name: users | remove associated group
+  group: name="{{item.username}}" state=absent
+  with_items: users_deleted
+  when: users_create_per_user_group
+  tags: [users, group, remove]

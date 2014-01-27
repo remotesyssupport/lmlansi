@@ -1,4 +1,5 @@
 ---
+### Vars for role: sshd
 sshd_pkg_name: openssh-server
 sshd_service_name: ssh
 sshd_config_basedir: /etc/ssh

@@ -1,2 +1,4 @@
-# Ansible Add Extra YUM Repositories
-An ansible role for adding thrid-party yum repository
+Ansible Add Extra YUM Repositories
+==================================
+
+An ansible role for adding third-party yum repository

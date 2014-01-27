@@ -1,0 +1,9 @@
+---
+### Defaults for role: sudo
+# Sudo User list [use %group_name for groups]
+sudo_users:
+  - root
+  - "%wheel"
+
+# Sudo users with or without passwd
+sudo_nopasswd: true
