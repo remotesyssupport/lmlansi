@@ -1,0 +1,10 @@
+---
+### Defaults for role: packages
+# Base Needed Packages
+base_pkg_list: []
+
+# Development Packages
+dev_pkg_list: []
+
+# Utility Packages
+util_pkg_list: []

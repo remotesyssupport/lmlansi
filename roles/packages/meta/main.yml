@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: "Raghav Palekar"
+  description: "Ansible role for installing system packages"
+  company: "Remote System Support"
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  categories:
+  - packaging
+  - system
+dependencies: []

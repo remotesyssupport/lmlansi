@@ -1,0 +1,47 @@
+---
+### Vars for role: packages [Redhat/CentOS]
+# Base Needed Packages
+base_pkg_list:
+  - curl
+  - git
+  - openssh
+  - openssh-clients
+  - openssh-server
+  - screen
+  - vim-enhanced
+  - wget
+  - xfsprogs
+
+# Development Packages
+dev_pkg_list:
+  - autoconf
+  - automake
+  - binutils
+  - curl-devel
+  - gcc
+  - gcc-c++
+  - gettext
+  - intltool
+  - libtool
+  - make
+  - openssl-devel
+  - patch
+  - patchutils
+  - pcre-devel
+  - pkgconfig
+  - zlib-devel
+
+# Utility Packages
+util_pkg_list:
+  - htop
+  - iptraf
+  - iperf
+  - iftop
+  - iotop
+  - lsof
+  - lshw
+  - nmap
+  - sysstat
+  - tcpdump
+  - telnet
+  - tree

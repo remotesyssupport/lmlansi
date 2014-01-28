@@ -3,3 +3,4 @@
 yum:
   epel_url: http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
   remi_url: http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+  endpoint_url: https://packages.endpoint.com/rhel/6/os/x86_64/endpoint-repo-1.6-1.x86_64.rpm

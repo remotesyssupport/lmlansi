@@ -1,0 +1,26 @@
+---
+### Tasks for role: packages
+# Get the OS Specific Packages
+- name: packages | Add the OS Specific Packages
+  include_vars: "{{ ansible_os_family }}.yml"
+  tags: [packages, variables]
+
+# Install packages for Redhat
+- name: packages | Install packages for Redhat/CentOS
+  yum: name={{ item }} state=installed enablerepo=remi,endpoint
+  with_items:
+    - base_pkg_list
+    - dev_pkg_list
+    - util_pkg_list
+  when: ansible_os_family == 'RedHat'
+  tags: [packages, install]
+
+# Install nt for Debian
+- name: packages | Install packages for Debian/Ubuntu
+  apt: name={{ item }} state=installed update_cache=yes
+  with_items:
+    - base_pkg_list
+    - dev_pkg_list
+    - util_pkg_list
+  when: ansible_os_family == 'Debian'
+  tags: [packages, install]

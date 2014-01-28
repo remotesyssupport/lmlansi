@@ -14,3 +14,13 @@
 - name: yumrepos | remi-repository rpm
   yum: name={{ yum.remi_url }} state=present
   tags: [yum, repository]
+
+# Add End-Point Yum Repo
+- name:  yumrepos | endpoint-repository rpm
+  yum: name={{ yum.endpoint_url }} state=present
+  tags: [yum, repository]
+
+# Update Yum Cache, to prevent out-of-date errors later
+- name: yumrepos | Update yum repos
+  shell: yum clean all ; yum check-update
+  tags: [yum, update]
