@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: "Raghav Palekar"
+  description: "Ansible role for install/configure rkhunter "
+  company: "Remote System Support"
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+  - name: EL
+    versions:
+    - all
+  #- name: Ubuntu
+  #  versions:
+  #  - all
+  categories:
+  - system
+dependencies: []

@@ -1,0 +1,4 @@
+---
+### Defaults for role: rkhunter
+rkhunter_mail_to: 
+  - "root@localhost"

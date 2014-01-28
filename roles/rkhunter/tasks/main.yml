@@ -1,0 +1,16 @@
+---
+### Tasks for Role: rkhunter
+# Install RKHunter
+- name: rkhunter | install rkhunter
+  yum: name=rkhunter state=present
+  tags: [rkhunter, packages]
+
+# Configure RKHunter
+- name: rkhunter | configure rkhunter
+  template: src=rkhunter_conf.j2 dest=/etc/rkhunter.conf mode=0640
+  tags: [rkhunter, configuration]
+
+# Configure RKHunter
+- name: rkhunter | configure rkhunter defaults
+  template: src=rkhunter_sysconfig.j2 dest=/etc/sysconfig/rkhunter mode=0640
+  tags: [rkhunter, configuration]
