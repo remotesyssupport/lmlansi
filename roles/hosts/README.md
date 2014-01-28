@@ -25,4 +25,4 @@ This role generates /etc/hosts file from the inventory
 
 ## Author Information
 
-**__Raghav Palekar <palekar@gmail.com>__**
+**__Raghav Palekar__**

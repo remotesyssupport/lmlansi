@@ -25,4 +25,4 @@ An ansible role for installing and securing sshd.
 
 ## Author Information
 
-**__Raghav Palekar <palekar@gmail.com>__**
+**__Raghav Palekar__**

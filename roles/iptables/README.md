@@ -25,4 +25,4 @@ An ansible role for putting up the firewall via iptables
 
 ## Author Information
 
-**__Raghav Palekar <palekar@gmail.com>__**
+**__Raghav Palekar__**

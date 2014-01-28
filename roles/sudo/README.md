@@ -25,4 +25,4 @@ A NOPASSWD based sudoer setup role
 
 ## Author Information
 
-**__Raghav Palekar <palekar@gmail.com>__**
+**__Raghav Palekar__**

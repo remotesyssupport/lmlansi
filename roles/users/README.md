@@ -25,4 +25,4 @@ Role to manage users on a system.
 
 ## Author Information
 
-**__Raghav Palekar <palekar@gmail.com>__**
+**__Raghav Palekar__**

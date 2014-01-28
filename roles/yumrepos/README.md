@@ -25,4 +25,4 @@ An ansible role for adding third-party yum repository
 
 ## Author Information
 
-**__Raghav Palekar <palekar@gmail.com>__**
+**__Raghav Palekar__**
