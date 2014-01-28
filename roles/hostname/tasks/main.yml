@@ -1,0 +1,6 @@
+---
+### Set the hostname
+- name: hostname | set hostname
+  sudo: true
+  hostname: name={{ inventory_hostname }}
+  tags: [hostname, configuration]
