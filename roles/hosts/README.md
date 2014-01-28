@@ -5,19 +5,19 @@ This role generates /etc/hosts file from the inventory
 
 ## Supported OS
 
-`**__TBD__**`
+`To Be Done`
 
 ## Requirements
 
-`**__TBD__**`
+`To Be Done`
 
 ## Role Variables
 
-`**__TBD__**`
+`To Be Done`
 
 ## Dependencies
 
-`**__TBD__**`
+`To Be Done`
 
 ## License
 

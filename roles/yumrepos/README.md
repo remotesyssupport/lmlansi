@@ -5,19 +5,19 @@ An ansible role for adding third-party yum repository
 
 ## Supported OS
 
-`**__TBD__**`
+**__`To Be Done`__**
 
 ## Requirements
 
-`**__TBD__**`
+`To Be Done`
 
 ## Role Variables
 
-`**__TBD__**`
+`To Be Done`
 
 ## Dependencies
 
-`**__TBD__**`
+`To Be Done`
 
 ## License
 

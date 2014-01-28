@@ -5,19 +5,19 @@ A NOPASSWD based sudoer setup role
 
 ## Supported OS
 
-`**__TBD__**`
+`To Be Done`
 
 ## Requirements
 
-`**__TBD__**`
+`To Be Done`
 
 ## Role Variables
 
-`**__TBD__**`
+`To Be Done`
 
 ## Dependencies
 
-`**__TBD__**`
+`To Be Done`
 
 ## License
 
