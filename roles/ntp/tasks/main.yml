@@ -26,7 +26,7 @@
   - restart ntp
   tags: [ntp, configuration]
 
-# Service restart
-- name: Start/stop ntp service
+#  Enable ntp servie
+- name: ntp | Enable ntp service
   service: name={{ ntp_service_name }} state={{ ntp_service_state }} enabled={{ ntp_service_enabled }}
   tags: [ntp, service]

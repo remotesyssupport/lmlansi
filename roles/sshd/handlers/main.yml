@@ -1,5 +1,5 @@
 ---
 ### Handlers for role: sshd
-- name: sshd | Restart sshd
+- name: restart sshd
   service: name={{ sshd_service_name }} state=restarted
   tags: [sshd, service]
