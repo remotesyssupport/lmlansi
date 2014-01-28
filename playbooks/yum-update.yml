@@ -1,0 +1,5 @@
+---
+### Playbook to update all packages
+- name: yum-update | yum update all
+  yum: name=* state=latest enablerepo=remi,endpoint
+  tags: [packages, update]
