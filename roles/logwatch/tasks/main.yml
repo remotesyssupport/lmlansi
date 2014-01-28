@@ -1,0 +1,9 @@
+---
+### Tasks for Role: logwatch
+- name: logwatch | Install logwatch
+  yum: name=logwatch state=installed
+  tags: [logwatch, package]
+
+- name: logwatch | Configure logwatch.conf
+  template: src=logwatch.conf dest=/usr/share/logwatch/default.conf/logwatch.conf mode=0644
+  tags: [logwatch, configuration]
