@@ -5,19 +5,19 @@ An ansible role for installing and securing sshd.
 
 ## Supported OS
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Requirements
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Role Variables
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Dependencies
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## License
 
@@ -25,4 +25,4 @@ An ansible role for installing and securing sshd.
 
 ## Author Information
 
-Raghav Palekar
+**__Raghav Palekar <palekar@gmail.com>__**

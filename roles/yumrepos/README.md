@@ -9,15 +9,15 @@ An ansible role for adding third-party yum repository
 
 ## Requirements
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Role Variables
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Dependencies
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## License
 
@@ -25,4 +25,4 @@ An ansible role for adding third-party yum repository
 
 ## Author Information
 
-Raghav Palekar
+**__Raghav Palekar <palekar@gmail.com>__**

@@ -5,19 +5,19 @@ Role to manage users on a system.
 
 ## Supported OS
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Requirements
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Role Variables
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Dependencies
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## License
 
@@ -25,4 +25,4 @@ Role to manage users on a system.
 
 ## Author Information
 
-Raghav Palekar
+**__Raghav Palekar <palekar@gmail.com>__**

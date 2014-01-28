@@ -5,19 +5,19 @@ A NOPASSWD based sudoer setup role
 
 ## Supported OS
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Requirements
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Role Variables
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Dependencies
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## License
 
@@ -25,4 +25,4 @@ A NOPASSWD based sudoer setup role
 
 ## Author Information
 
-Raghav Palekar
+**__Raghav Palekar <palekar@gmail.com>__**

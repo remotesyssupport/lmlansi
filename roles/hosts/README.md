@@ -1,23 +1,23 @@
-# Ansible Hosts role
+# Ansible Role: Hosts
 
 ## Description
 This role generates /etc/hosts file from the inventory
 
 ## Supported OS
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Requirements
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Role Variables
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## Dependencies
 
-`To Be Done`
+**__`To Be Done`__**
 
 ## License
 
@@ -25,4 +25,4 @@ This role generates /etc/hosts file from the inventory
 
 ## Author Information
 
-Raghav Palekar
+**__Raghav Palekar <palekar@gmail.com>__**
