@@ -1,0 +1,32 @@
+---
+### Task for Role: ansible
+# Get the OS specific Variables
+- name: ntp | Add the OS specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+  tags: [ntp, variables]
+
+# Install ntp for Redhat
+- name: ntp | Install ntp for Redhat/CentOS
+  yum: name={{ item }} state={{ npt_pkg_state }}
+  with_items: ntp_pkgs
+  when: ansible_os_family == 'RedHat'
+  tags: [ntp, package]
+
+# Install ntp for Debian
+- name: ntp | Install ntp for Debian/Ubuntu
+  apt: name={{ item }} state={{ npt_pkg_state }} update_cache=yes
+  with_items: ntp_pkgs
+  when: ansible_os_family == 'Debian'
+  tags: [ntp, package]
+
+# Configure ntp
+- name: ntp | Copy the ntp.conf template file
+  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+  notify: 
+  - restart ntp
+  tags: [ntp, configuration]
+
+# Service restart
+- name: Start/stop ntp service
+  service: name={{ ntp_service_name }} state={{ ntp_service_state }} enabled={{ ntp_service_enabled }}
+  tags: [ntp, service]
