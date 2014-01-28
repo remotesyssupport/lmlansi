@@ -1,4 +1,4 @@
-# Ansible Users role
+# Ansible Role: users
 
 ## Description
 Role to manage users on a system.

@@ -1,4 +1,4 @@
-# Ansible SSHd role
+# Ansible Role: sshd
 
 # Description
 An ansible role for installing and securing sshd.

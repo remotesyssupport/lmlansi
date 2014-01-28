@@ -1,4 +1,4 @@
-# Ansible sudo role
+# Ansible Role: sudo
 
 ## Description
 A NOPASSWD based sudoer setup role

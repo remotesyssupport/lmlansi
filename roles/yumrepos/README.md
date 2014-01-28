@@ -1,4 +1,4 @@
-# Ansible Add Extra YUM Repositories
+# Ansible Role: yumrepos
 
 ## Description
 An ansible role for adding third-party yum repository

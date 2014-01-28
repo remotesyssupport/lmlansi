@@ -1,4 +1,4 @@
-# Ansible Firewall Role - iptables
+# Ansible Role: Firewall [iptables]
 
 ## Description
 An ansible role for putting up the firewall via iptables
