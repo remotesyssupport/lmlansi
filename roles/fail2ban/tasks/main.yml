@@ -1,0 +1,24 @@
+---
+### Tasks for Role: fail2ban
+# Install fail2ban on Debian/Ubuntu
+- name: fail2ban | Install fail2ban on Debian/Ubuntu
+  apt: pkg=fail2ban state={{ fail2ban_pkg_state }}
+  when: ansible_os_family == 'Debian'
+  tags: [fail2ban, package]
+
+# Install fail2ban on Redhat/CentOS
+- name: fail2ban | Install fail2ban on Redhat/CentOS
+  yum: name=fail2ban state={{ fail2ban_pkg_state }}
+  when: ansible_os_family == 'RedHat'
+  tags: [fail2ban, package]
+
+# Configure fail2ban
+- name: fail2ban | Configure fail2ban local jails
+  action: template src=jail.local.j2 dest=/etc/fail2ban/jail.local mode=0644
+  notify: restart fail2ban
+  tags: [fail2ban, configuration]
+
+# Service for fail2ban
+- name: fail2ban | Service setup
+  service: name=fail2ban state={{ fail2ban_service_state }} enabled={{ fail2ban_service_enabled }}
+  tags: [fail2ban, service]

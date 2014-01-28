@@ -1,4 +1,5 @@
 ---
 ### Handler for role: ntp
-- name: restart ntp
+- name: ntp | restart ntp
   service: name={{ ntp_service_name }} state=restarted
+  tags: [ntp, service]

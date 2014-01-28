@@ -1,5 +1,6 @@
 ---
 ### Handler for role: iptables
 # Service Iptables
-- name: Iptables | Restart iptables
+- name: iptables | Restart iptables
   service: name=iptables state=restarted
+  tags: [iptables, service]
