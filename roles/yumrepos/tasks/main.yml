@@ -19,3 +19,4 @@
 - name: yumrepos | Update yum repos
   shell: yum clean all ; yum check-update
   tags: [yum, update]
+  ignore_errors: yes
