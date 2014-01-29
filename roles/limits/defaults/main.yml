@@ -1,0 +1,4 @@
+---
+### Defaults for role: limits
+fs_file_max: 65535
+proc_max: 65536

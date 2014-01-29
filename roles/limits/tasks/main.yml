@@ -1,0 +1,5 @@
+---
+### Tasks for Role: limits
+- name: limits | configure limits 
+  template: src=limits_conf.j2 dest=/etc/security/limits.conf mode=0644 owner=root group=root
+  tags: [limits, configuration]
