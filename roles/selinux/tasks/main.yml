@@ -3,6 +3,7 @@
 - name: selinux | disable selinux
   command: /usr/sbin/setenforce 0
   tags: [selinux, configuration]
+  ignore_errors: yes
 
 - name: selinux | copy selinux config
   copy: src=selinux dest=/etc/selinux/config mode=0644
