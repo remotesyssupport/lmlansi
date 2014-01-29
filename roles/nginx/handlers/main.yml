@@ -1,0 +1,9 @@
+---
+### Handlers for Role: nginx
+- name: restart nginx
+  service: name=nginx state=restarted 
+  tags: [nginx, service]
+
+- name: reload nginx
+  service: name=nginx state=reloaded
+  tags: [nginx, service]

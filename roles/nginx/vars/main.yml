@@ -1,0 +1,10 @@
+---
+### Vars for Role: nginx
+env:
+ RUNLEVEL: 1
+
+redhat_pkg:
+  - nginx
+
+ubuntu_pkg:
+  - nginx

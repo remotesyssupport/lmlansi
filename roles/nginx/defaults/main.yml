@@ -1,0 +1,19 @@
+---
+### Defaults for Role: nginx
+nginx_max_clients: 512
+
+nginx_http_params:
+  sendfile: "on"
+  tcp_nopush: "on"
+  tcp_nodelay: "on"
+  keepalive_timeout: "65"
+  access_log: "/var/log/nginx/access.log"
+  error_log: "/var/log/nginx/error.log"
+
+nginx_sites:
+ - server:
+    file_name: localhost
+    listen: 8080
+    server_name: localhost
+    root: "/var/www/localhost"
+    location1: {name: /, try_files: "$uri $uri/ /index.html"}
