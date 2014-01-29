@@ -9,7 +9,7 @@
 
 - name: selinux | disable selinux
   command: /usr/sbin/setenforce 0
-  when: sestatus != "Disabled"
+  when: sestatus != Disabled
   tags: [selinux, configuration]
   #ignore_errors: yes
 
