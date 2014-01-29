@@ -7,6 +7,12 @@
   when: users_create_per_user_group
   tags: [users, group, create]
 
+# Create the extra groups
+- name: users | create extra groups
+  group: name="{{ item }}" system=no
+  with_items: users_extra_groups
+  tags: [users, group, create]
+
 # Create the user
 - name: users | create user
   user: >

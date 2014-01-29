@@ -6,6 +6,7 @@ fs_file_max: 65535
 proc_max: 65536
 
 # variable for user creation [roles: users]
+users_extra_groups: [ 'admins']
 users_create_per_user_group: true
 users_default_shell: /bin/bash
 users_create_homedirs: true
@@ -28,6 +29,7 @@ users:
     uid: 1003
     ssh_key:
       - "ssh-rsa AAA..some..junk..key travis"
+
 # variables for sudo users [roles: sudo]
 sudo_nopasswd: true
 sudo_users:

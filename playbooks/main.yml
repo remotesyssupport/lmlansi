@@ -11,18 +11,6 @@
   vars:
     _sshd_port: 22
 
-  # Run the Mandatory tasks
-  tasks:
-    # Ansible needs libselinux-python
-    - name: Mandatory Requirement | Install libselinux-python
-      yum: name=libselinux-python state=present
-      tags: [common, yum, package]
-
-    # Create important groups
-    - name: Mandatory Requirement | Create group admins
-      action: group name=admin gid=1000 system=no
-      tags: [common, group, create]
-
   # Common Roles
   roles:
     - yumrepos
