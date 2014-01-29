@@ -1,5 +1,5 @@
 ---
-### Master Playbook 
+### Common Playbook 
 - name: Common | Setup the base common on all servers
   hosts: all
   gather_facts: True
@@ -9,7 +9,7 @@
   # Define variables 
   ## - its always better to be done in group_vars or host_vars
   vars:
-    _sshd_port: 22512
+    _sshd_port: 22
 
   # Common Roles
   roles:
@@ -22,8 +22,8 @@
     - ntp
     - users
     - sudo
-    - {role: iptables, iptables_accept_ports: [$_sshd_port, 22, 80, 443, 8080]}
+    - {role: iptables, iptables_accept_ports: [$_sshd_port, 80, 443]}
     - packages
     - logwatch
     - rkhunter
-    - {role: sshd, sshd_port: $_sshd_port, sshd_permit_root_login: "no"}
+    - {role: sshd, sshd_port: $_sshd_port, sshd_permit_root_login: "yes"}
