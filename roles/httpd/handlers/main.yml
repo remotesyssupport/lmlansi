@@ -1,0 +1,5 @@
+---
+### Handlers for Role: httpd
+- name: restart apache2
+  service: name={{ httpd_service }} state=restarted 
+  tags: [httpd, service]

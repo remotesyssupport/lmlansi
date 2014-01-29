@@ -1,0 +1,15 @@
+---
+### Defaults for Role: httpd
+httpd_timeout: 60
+httpd_keepalive: "Off"
+httpd_listen: 80
+httpd_user: "apache"
+httpd_group: "apache"
+httpd_serveradmin: "root@localhost"
+httpd_servername: "www.example.com:80"
+httpd_documentroot: "/var/www/html"
+httpd_icons: "/var/www/icons/"
+httpd_cgibin: "/var/www/cgi-bin/"
+httpd_hostnamelookups: "Off"
+httpd_errorlog: "logs/error_log"
+httpd_loglevel: "warn"

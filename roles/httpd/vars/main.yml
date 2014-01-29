@@ -1,0 +1,11 @@
+---
+### Vars for role: httpd
+httpd_pkgs:
+  - httpd
+  - httpd-tools
+  - mod_ssl
+
+httpd_service: httpd
+httpd_server_root: "/etc/httpd"
+httpd_conf_dir: "/etc/httpd/conf"
+httpd_pid_file: "run/httpd.pid"
