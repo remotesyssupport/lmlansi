@@ -9,9 +9,9 @@
 - name: packages | Install packages for Redhat/CentOS
   yum: name={{ item }} state=installed enablerepo=remi,endpoint
   with_items:
-    - base_pkg_list
-    - dev_pkg_list
-    - util_pkg_list
+    - $base_pkg_list
+    - $dev_pkg_list
+    - $util_pkg_list
   when: ansible_os_family == 'RedHat'
   tags: [packages, install]
 
@@ -19,8 +19,8 @@
 - name: packages | Install packages for Debian/Ubuntu
   apt: name={{ item }} state=installed update_cache=yes
   with_items:
-    - base_pkg_list
-    - dev_pkg_list
-    - util_pkg_list
+    - $base_pkg_list
+    - $dev_pkg_list
+    - $util_pkg_list
   when: ansible_os_family == 'Debian'
   tags: [packages, install]

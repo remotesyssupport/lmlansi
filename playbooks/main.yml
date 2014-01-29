@@ -31,7 +31,6 @@
     - sudo
     - {role: iptables, iptables_accept_ports: [$_sshd_port, 80, 443, 8080, 22512]}
     - packages
-    - fail2ban
     - logwatch
     - rkhunter
-    - {role: sshd, sshd_port: $_sshd_port, sshd_permit_root_login: yes}
+    - {role: sshd, sshd_port: $_sshd_port, sshd_permit_root_login: "yes"}

@@ -27,7 +27,7 @@ users:
     groups: ['users']
     uid: 1003
     ssh_key:
-      - ""
+      - "ssh-rsa AAA..some..junk..key travis"
 # variables for sudo users [roles: sudo]
 sudo_nopasswd: true
 sudo_users:
@@ -41,5 +41,5 @@ iptables_accept_ports: [22, 80, 443, 22512]
 
 # ssh variables [roles: sshd]
 sshd_port: 22512
-sshd_permit_root_login: no
-sshd_password_auth: no
+sshd_permit_root_login: "no"
+sshd_password_auth: "no"

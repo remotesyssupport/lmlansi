@@ -4,10 +4,10 @@
 sshd_port: 22512
 
 # Allowed settings are: yes, no, without-password
-sshd_permit_root_login: no
+sshd_permit_root_login: "no"
 
 # Allowed setting are: yes, no
-sshd_password_auth: no
+sshd_password_auth: "no"
 
 # Allowed setting are: installed, latest
 sshd_pkg_state: installed
