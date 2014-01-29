@@ -23,8 +23,9 @@
     - ntp
     - users
     - sudo
-    - {role: iptables, iptables_accept_ports: [22, $_sshd_port, 80, 443]}
     - packages
     - logwatch
     - rkhunter
+    - postfix
+    - {role: iptables, iptables_accept_ports: [22, $_sshd_port, 80, 443]}
     - {role: sshd, sshd_port: $_sshd_port, sshd_permit_root_login: "no"}
