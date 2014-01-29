@@ -17,6 +17,7 @@
 
 # Update Yum Cache, to prevent out-of-date errors later
 - name: yumrepos | Update yum repos
-  shell: yum clean all ; yum check-update
+  #shell: yum clean all ; yum check-update [check-update takes a long time]
+  shell: yum clean all
   tags: [yum, update]
   ignore_errors: yes
