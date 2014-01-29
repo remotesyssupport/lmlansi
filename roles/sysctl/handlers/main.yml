@@ -1,0 +1,6 @@
+---
+### Handler for Role: sysctl
+- name: reload sysctl
+  shell: "/sbin/sysctl -p"
+  tags: [systcl, service]
+    

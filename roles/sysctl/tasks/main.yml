@@ -1,0 +1,8 @@
+---
+### Tasks for Role: sysctl
+# Configure sysctl
+- name: sysctl | configure sysctl
+  template: src=sysctl_conf.j2 dest=/etc/sysctl.conf mode=0644 owner=root group=root
+  notify:
+    - reload sysctl
+  tags: [sysctl, configuration]
