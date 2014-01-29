@@ -1,0 +1,5 @@
+---
+### Handlers for role: postfix
+- name: restart postfix
+  service: name=postfix state=restarted
+  tags: [postfix, service]

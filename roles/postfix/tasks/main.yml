@@ -1,0 +1,25 @@
+---
+### Tasks for role: postfix
+# Install Postfix
+- name: postfix | Install postfix for Redhat/CentOS
+  yum: name=postfix state=installed
+  tags: [postfix, package]
+
+# Configure postfix [main.cf]
+- name: postfix | Copy the main.cf template file
+  template: src=main_cf.j2 dest=/etc/postfix/main.cf
+  notify:
+  - restart postfix
+  tags: [postfix, configuration]
+
+# Configure postfix [master.cf]
+- name: postfix | Copy the master.cf template file
+  template: src=master_cf.j2 dest=/etc/postfix/master.cf
+  notify:
+  - restart postfix
+  tags: [postfix, configuration]
+
+#  Enable postfix servie
+- name: postfix | Enable postfix service
+  service: name=postfix state=running enabled=yes
+  tags: [postfix, service]
