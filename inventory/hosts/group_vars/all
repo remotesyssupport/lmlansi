@@ -1,3 +1,45 @@
 ---
-# group variables that should be globally available go here
-place_holder: data
+### group variables that should be globally available for all servers
+
+# max no of file and proc [roles: sysctl/limits]
+fs_file_max: 65535
+proc_max: 65536
+
+# variable for user creation [roles: users]
+users_create_per_user_group: true
+users_default_shell: /bin/bash
+users_create_homedirs: true
+users:
+  - username: deonvdv
+    name: "Deon van der Vyver"
+    groups: ['wheel', 'admins']
+    uid: 1001
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDkj5dPn/h4AZL9tVUavdeDD6jAuWAOMFAuLkAvgRnzy4VNk1S4EwfkomozJyjGY+wIaQs1N7BWy7E8PVsYAy2eqKGTuLiQC1tf+g8eXkOfI11WH7c3KeY/AAXyqYULhhBJ92a3L17xIYqz7lioTlweJ7E6idQOy+YHHgYfMIwZFRvNuRh5GvAunHqJHaATbbxB3J174NCMSbAVU+qCzuKFiLjyw6havWaaoSOtdMEOh4C0G/oF+V+MyyOz8XZLUTqp6hIMEbEadiZx/C3AC/1ofA2yf3FV82g8M2APulgcZX5rCbuROL5n1N7cKUR1U1GoMAA85p1C62F2MgWaNgZL deonvdv"
+  - username: raghav
+    name: "Raghav Palekar"
+    groups: ['wheel', 'admins']
+    uid: 1002
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCX57ClBpJBdUrjD1UtLWZwLkIRARFc2ojh2vpJ+F580QLhL42C7d/YgAs2sk5h+t0/66Ca6m8itz7Bao5/Y02jAp3bcZH2M4AGw+NCeJahiAOFhCVUIeB36k7qgTmKOAazAEmbg44dUp3blQXAeSDQGx1aY1g2fHGc7/F+pQdG9IG2KvT5X2vnFuxWAtIPJqxgRDL7WRzSTZUfnlGhqa2kQ8l64Lv3TABZhx7CZ9GY7Ezg6bxepu18+X+eHRAYSvKPhFdniv3jcUoOFLPHuwPllKBGQDMpte23ewkdxnjB+9noHhjqEteWlnc4exmSqzS+frX4IexwyWQtbbTgOP/3 raghav"
+  - username: travis
+    name: "Travis"
+    groups: ['users']
+    uid: 1003
+    ssh_key:
+      - ""
+# variables for sudo users [roles: sudo]
+sudo_nopasswd: true
+sudo_users:
+  - root
+  - deonvdv
+  - raghav
+  - "%admins"
+
+# variables for firewall [roles: iptables]
+iptables_accept_ports: [22, 80, 443, 22512]
+
+# ssh variables [roles: sshd]
+sshd_port: 22512
+sshd_permit_root_login: no
+sshd_password_auth: no

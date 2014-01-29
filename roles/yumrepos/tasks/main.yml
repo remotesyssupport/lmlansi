@@ -1,10 +1,5 @@
 ---
 ### Tasks for role: yumrepos
-# Ansible needs libselinux-python
-- name: Mandatory Requirement | Install libselinux-python
-  yum: name=libselinux-python state=present
-  tags: [common, yum, package]
-
 # Add EPEL Yum Repo
 - name: yumrepos | epel-release-repository rpm 
   yum: name={{ yum.epel_url }} state=present

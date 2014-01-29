@@ -1,3 +1,37 @@
 ---
 ### Master Playbook 
+- name: Common | Setup the base common on all servers
+  hosts: all
+  gather_facts: True
+  remote_user: root
+  sudo: True
 
+  # Define variables 
+  ## - its always better to be done in group_vars or host_vars
+  vars:
+    _sshd_port: 22
+
+  # Run the Mandatory tasks
+  tasks:
+    # Ansible needs libselinux-python
+    - name: Mandatory Requirement | Install libselinux-python
+      yum: name=libselinux-python state=present
+      tags: [common, yum, package]
+
+  # Common Roles
+  roles:
+    - yumrepos
+    - selinux
+    - hostname
+    - hosts
+    - sysctl
+    - limits
+    - ntp
+    - users
+    - sudo
+    - {role: iptables, iptables_accept_ports: [$_sshd_port, 80, 443, 8080, 22512]}
+    - packages
+    - fail2ban
+    - logwatch
+    - rkhunter
+    - {role: sshd, sshd_port: $_sshd_port, sshd_permit_root_login: yes}
